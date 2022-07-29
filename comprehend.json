@@ -1,0 +1,20 @@
+{
+    "ResponseMetadata": {
+        "HTTPHeaders": {
+            "content-length": "164",
+            "content-type": "application/x-amz-json-1.1",
+            "date": "Thu, 28 Jul 2022 14:15:50 GMT",
+            "x-amzn-requestid": "b10d5da4-1703-4338-b728-926f37b08734"
+        },
+        "HTTPStatusCode": 200,
+        "RequestId": "b10d5da4-1703-4338-b728-926f37b08734",
+        "RetryAttempts": 0
+    },
+    "Sentiment": "NEUTRAL",
+    "SentimentScore": {
+        "Mixed": 9.226534893969074e-05,
+        "Negative": 0.00017459846276324242,
+        "Neutral": 0.9162368178367615,
+        "Positive": 0.08349630236625671
+    }
+}
