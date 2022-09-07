@@ -32,37 +32,10 @@ def detect_sentiment(text, language_code):
     response = comprehend.detect_sentiment(Text=text, LanguageCode=language_code)
     return response
 
-text = "Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to find insights and relationships in text."
-
-# detecting sentiment
-# result = detect_sentiment(text, 'en')
-# print("Starting detecting sentiment")
-# #print(json.dumps(result, sort_keys=True, indent=4))
-# data = [
-#     {
-#         'Text_tweet': text, 
-#         'sentiment': result['Sentiment'], 
-#         'Positive_score': result['SentimentScore']['Positive'], 
-#         'Negative_score': result['SentimentScore']['Negative'], 
-#         'Neutral_score': result['SentimentScore']['Neutral']
-#     },
-#     {
-#         'Text_tweet': text, 
-#         'sentiment': result['Sentiment'], 
-#         'Positive_score': result['SentimentScore']['Positive'], 
-#         'Negative_score': result['SentimentScore']['Negative'], 
-#         'Neutral_score': result['SentimentScore']['Neutral']
-#     }
-# ]
-# df = pd.DataFrame(data)
-# print(df)
-# print("End of detecting sentiment\n")
-
 # arr_csv = [x for x in os.listdir() if x.endswith(".csv")]
 # for file in arr_csv:
 #     print(f"Reading... {file}")
 #     read_csv(file)
-
 
 lista = read_csv('nytimes.csv')
 data = [{}]

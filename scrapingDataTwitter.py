@@ -4,6 +4,10 @@ import tweepy
 from dotenv import load_dotenv
 load_dotenv()
 
+# nickname of twitter account
+account_list = ['guardian', 'nytimes']
+number_of_tweets_scraping = 2
+
 def remove_comma(input_string):
     changed = input_string.replace(",","")
     return changed
@@ -48,9 +52,7 @@ def write_csv(csv_file_name, lista):
             row.writerow(test_list)
             test_list.clear()
 
-account_list = ['guardian', 'nytimes']
-
-# API keyws twitter
+# API keys twitter
 api_key = os.environ['api_key_tw']
 api_secrets = os.environ['api_key_secret_tw']
 access_token = os.environ['access_token_tw']
@@ -60,7 +62,7 @@ access_secret = os.environ['access_token_secret_tw']
 auth = tweepy.OAuthHandler(api_key,api_secrets)
 auth.set_access_token(access_token,access_secret)
 api = tweepy.API(auth)
- 
+
 try:
     api.verify_credentials()
     print('Successful Authentication')
@@ -69,9 +71,9 @@ except:
 
 #user = api.get_user(screen_name='guardian')
 
-number_of_tweets = 1
-
 for name in account_list:
     print(f"Scraping tweets from [{name}]")
-    tweet_list = grep_tweets(name, number_of_tweets)
+    tweet_list = grep_tweets(name, number_of_tweets_scraping)
     write_csv(name, tweet_list)
+
+print(tweet_list)
