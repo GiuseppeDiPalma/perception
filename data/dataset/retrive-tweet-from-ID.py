@@ -6,7 +6,7 @@ from __future__ import print_function
 import getopt
 import logging
 import os
-import sys, csv
+import sys
 # import traceback
 # third-party: `pip install tweepy`
 import tweepy
@@ -32,6 +32,9 @@ def get_tweet_id(line):
     # (_tag, _search, tweet_id) = tagid.split(':')
     tweet_id = line.split(',')[0]
     type_tw = line.split(',')[1]
+    type_tw_2 = line.split(',')[2]
+    type_tw_3 = line.split(',')[3]
+    type_tw_4 = line.split(',')[4]
     return tweet_id, type_tw
 
 def get_tweets_single(twapi, idfilepath):
