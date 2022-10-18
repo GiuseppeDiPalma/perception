@@ -131,3 +131,6 @@ dmypy.json
 # Myignore
 .vscode/
 aclImdb/
+
+TO-DO.txt
+aclImdb_v1.tar.gz
