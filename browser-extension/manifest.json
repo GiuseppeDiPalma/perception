@@ -1,0 +1,32 @@
+{
+    "name": "Hate speech detector",
+    "description": "Detects hate speech in nytimes titles!",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "js/sw.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/128.png"
+    },
+    "icons": {
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "128": "icons/128.png",
+        "256": "icons/256.png",
+        "512": "icons/512.png"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.nytimes.com/*"],
+            "js": ["js/content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": ["storage"]
+}
