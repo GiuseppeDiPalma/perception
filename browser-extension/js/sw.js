@@ -17,7 +17,7 @@ async function sendTitles() {
             body: JSON.stringify({titles: newTitles})
         }
 
-        let response = await fetch('http://localhost:3000/titles', options)
+        let response = await fetch('http://localhost:5000/titles', options)
         let json = await response.json()
 
         if (json.success) {
