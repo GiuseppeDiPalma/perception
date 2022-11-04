@@ -1,29 +1,29 @@
-# GET The GET method is used to retrieve information from the given server using a given URI. 
-# Requests using GET should only retrieve data and should have no other effect on the data.
-
-# POST The POST request is used to send data to the server, 
-# for example, customer information, file upload, etc. using HTML forms.
-
-# PUT Replaces all the current representations of the target resource with the uploaded content.
-
-from flask import Flask
-from flask import request
-from flask import jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
-import modelPrediction as mp
-
 import requests
+import json
 import boto3
+
+import modelPrediction as mp
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 data = {
-    "titles": [],
-    "hate_speech": ["", ""],
-    "sentiment": ["Positive", "Negative", "Neutral", "Mixed"]
+    "titles": []
+}
+
+results = {
+    "success": True,
+    "results": [
+        {
+            "title": " ",
+            "sentiment": " ",
+            "hate_speech": " "
+        }
+    ]
 }
 
 @app.route('/titles', methods=['POST', 'GET'])
@@ -31,48 +31,83 @@ data = {
 def get_titles():
     print("Retriving titles from newspaper...")
     titles = request.get_json()
-    
-    # titles in dictionary
-    data['titles'] = titles['titles']
 
+    data['titles'] = titles['titles']
+    results['results'].pop(0)
+
+    # add titles in results dictionary
+    for title in titles['titles']:
+        if len(title.split()) >= 3:
+            results['results'].append({
+                "title": title,
+                "sentiment": "",
+                "hate_speech": ""
+            })
+        # elif len(title.split()) < 3:
+        #     print("Title not added: ", title)
+    
     print("Start engine...")
-    engine(data)
+    engine(results)
+    print("End engine!")
 
     return jsonify(titles)
 
-def engine(data):
-    print("Calculating sentiment...")
-    calculate_sentiment(data)
-    
-    print("Calculating hate speech...")
-    calculate_hate_speech(data)
+def print_results(results):
+    with open('results-test.json', 'w') as f:
+        json.dump(results, f, indent=4)
 
-    print("Sending data to frontend...")
-    send_data(data)
-
-def calculate_sentiment(data):
-    titles = data['titles']
+def calculate_sentiment(results):
+    titles = results['results']
     comprehend = boto3.client('comprehend', region_name='us-east-1')
     for title in titles:
-        sentiment = comprehend.detect_sentiment(Text=title, LanguageCode='en')
-        print(f"{title} - [{sentiment['Sentiment']}]")
-        data['sentiment'].append(sentiment['Sentiment'])
-    return data
+        sentiment = comprehend.detect_sentiment(Text=title['title'], LanguageCode='en')
+        title['sentiment'] = sentiment['Sentiment']
+    return results
 
-def send_data(data):
-    jsonify(data)
-    req = requests.post('http://localhost:5001/results', json=data)
+def calculate_hate_speech(results):
+    titles = results['results']
+    for title in titles:
+        hate_speech = mp.prediction(title['title'])
+        if hate_speech == 1:
+            title['hate_speech'] = "NO HS"
+        elif hate_speech == 0:
+            title['hate_speech'] = "HS"
+    return results
+
+def send_data(results):
+    jsonify(results)
+    req = requests.post('http://localhost:5000/results', json=results)
+    # check if the request was successful
+    if req.status_code == 200:
+        print('Request successful')
+    else:
+        print("NO NO NO:", req.status_code)
+
+    res_vat = req.text
+    res_code = req.status_code, req.reason
+    print("Response: ", res_vat)
+    print("Status code: ", res_code)
     return req
 
-def calculate_hate_speech(data):
-    titles = data['titles']
-    for title in titles:
-        hate_speech = mp.prediction(title)
-        if hate_speech == 1:
-            data['hate_speech'].append("NO HS")
-        elif hate_speech == 0:
-            data['hate_speech'].append("HS")
-    return data
+# @app.route('/results', methods=['POST'])
+# def test(results):
+#     req = requests.post('http://localhost:5000/results', json=results)
+#     res_vat = req.text
+#     res_code = req.status_code, req.reason
+#     print("Response: ", res_vat)
+#     print("Status code: ", res_code)
+
+def engine(results):
+    print("Calculating sentiment...")
+    calculate_sentiment(results)
+
+    print("Calculating hate speech...")
+    calculate_hate_speech(results)
+
+    print("Sending data to frontend...")
+    send_data(results)
+    # test = jsonify(results)
+    # test(test)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)

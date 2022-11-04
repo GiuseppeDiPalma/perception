@@ -35,6 +35,7 @@ df['message'] = df['message'].apply(lambda x: ' '.join(x))
 counts = count_vect.fit_transform(df['message'])
 transformer = TfidfTransformer().fit(counts)
 counts = transformer.fit_transform(counts)
+print("End modelPrediction computation")
 
 def prediction(stringa):
     model = load_model('data/modelSave/nb_model.sav')

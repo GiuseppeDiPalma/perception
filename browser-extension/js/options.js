@@ -1,31 +1,57 @@
 onload = async () => {
-    let results = []
+    let {results} = await chrome.storage.local.get({results: []})
+    const clearBtn = document.querySelector('.clear-btn')
+    let rows = []
 
     try {
         let response = await fetch('https://localhost:3000/results')
-        let data = await response.json()
+        let json = await response.json()
+        console.log(json)
 
-        console.log(data)
+        if (json.success) {
+            results.push(...json.results)
+            chrome.storage.local.set({results})
 
-        if(data.success) {
-            results = data.results.map(result => `<tr><td>${result}</td></tr>`)
+            rows = json.results.map(result => {
+                return `<tr>
+                    <td>${result.title}</td>
+                    <td>${result.hate_speech}</td>
+                    <td>${result.sentiment}</td>
+                    </tr>`
+                }
+            )
         }
-    } 
+    }
     catch (error) {
         console.log(error)
     }
 
-    if(results.length) { // if there are results received from the server show them
-        document.querySelector('tbody').innerHTML = results.join('')
+    if (rows.length) { // if there are results received from the server show them
+        document.querySelector('tbody').innerHTML = rows.join('')
+        
+        clearBtn.disabled = false
+        clearBtn.addEventListener('click', clear)
     }
     else {
-        let {titles, newTitles} = await chrome.storage.local.get({titles: [], newTitles: []})
-    
-        let titlesMarkup = titles.map(title => `<tr><td>${title}</td></tr>`)
-        let newTitlesMarkup = newTitles.map(title => `<tr><td>${title}</td></tr>`)
-    
-        if(titlesMarkup.length || newTitlesMarkup.length) {
-            document.querySelector('tbody').innerHTML = titlesMarkup.join('') + newTitlesMarkup.join('')
+        let savedResults = results.map(result => {
+            return `<tr>
+                <td>${result.title}</td>
+                <td>${result.hate_speech}</td>
+                <td>${result.sentiment}</td>
+                </tr>`
+            }
+        )
+
+        if (savedResults.length) {
+            document.querySelector('tbody').innerHTML = savedResults.join('')
+            clearBtn.disabled = false
+            clearBtn.addEventListener('click', clear)
         }
     }
+}
+
+function clear() {
+    this.disabled = true
+    chrome.storage.local.set({results: []})
+    document.querySelector('tbody').innerHTML = '<tr><td>No Headlines</td><td>No hate</td><td>No sentiment</td></tr>'
 }
