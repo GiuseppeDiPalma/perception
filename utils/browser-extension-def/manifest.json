@@ -28,5 +28,6 @@
             "run_at": "document_start"
         }
     ],
+    "host_permissions": ["https://localhost:5000/*"],
     "permissions": ["storage"]
 }

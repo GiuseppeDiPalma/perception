@@ -1,0 +1,390 @@
+{
+    "success": true,
+    "results": [
+        {
+            "title": "U.S. Midterm Elections",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "U.S. Jobs Report",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Elon Musk Begins Layoffs at Twitter",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Under Financial Pressure, Musk Pushes to Make Money From Twitter",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Between Kanye and the Midterms, the Unsettling Stream of Antisemitism",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Brooklyn Nets suspended Kyrie Irving indefinitely after his social media post about an antisemitic film.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The F.B.I. warned of threats to synagogues in New Jersey.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Workers Expect Fast Inflation Next Year. Could That Make It a Reality?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "U.S. Labor Market Expected to Slow Again",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Wisconsin Republicans Stand on the Verge of Total, Veto-Proof Power",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Republican secretaries of state are walking a minefield of election lies.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "\u2018Get ready,\u2019 Trump tells Iowa crowd, for his next presidential bid.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "On the campaign trail in New Mexico, Biden pitches the economy to a skeptical public.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Support for abortion access does not appear to be outweighing economic concerns for pivotal swing voters.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "In a town in Arizona that inspired a debunked film about voter fraud, some residents are now scared to vote.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Los Angeles Pedestrians Look Forward to Relaxed Jaywalking Law",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "\u2018I\u2019m Afraid for My Future\u2019: Proposed Laws Threaten Gay Life in Russia",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Signs of Russia\u2019s Rule Disappear From Kherson, but Its Soldiers Do Not",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Worries Grow That TikTok Is New Home for Manipulated Video and Photos",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "In a Bid to Show It Is Open, Hong Kong Bends Covid Rules \u2026 for Some",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "New Covid variants are circulating. Here\u2019s what to know.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Housing Market Is Worse Than You Think",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Is This A.I. Thanksgiving Menu We Tried Better Than a Human\u2019s?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Are you ready for gas station sunglasses?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Modern Love: My post-divorce choice: OkCupid or Petfinder?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "PATRICK HEALY AND ADRIAN J. RIVERA",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "We Asked 12 Arizona Voters What They Thought About Kari Lake and Joe Biden",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "THOMAS L. FRIEDMAN",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Israel We Knew Is Gone",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Attack on Paul Pelosi Has Unmasked the G.O.P.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Doug Mastriano and the Potential of Amish Voters in Pennsylvania",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Why Aren\u2019t the Democrats Trouncing These Guys?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Dobbs Decision Revealed How Weak the Pro-Life Movement Really Is",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Washington\u2019s New Cold War Cancel Culture",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "What If Every Moment Since Jan. 6 Was Just the Calm Before the Storm?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "\u2018THE EZRA KLEIN SHOW\u2019",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Inflation Does More Than Raise Prices. It Destroys Governments.",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The G.O.P. Plot Against Medicare and Social Security",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Huge Problem That Nobody Cares About",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "HS"
+        },
+        {
+            "title": "THE EDITORIAL BOARD",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "America Can Have Democracy or Political Violence. Not Both.",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Marriage Is Hard. Just Ask Tom and Gisele.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The New Covid Boosters Are Incredible, and Everyone Should Get One",
+            "sentiment": "POSITIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Hundreds Died. Millions Suffered. Abbott Will Probably Get a Third Term Anyway.",
+            "sentiment": "NEGATIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "What You Can Expect if Republicans Take the House",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Read the On Politics Newsletter",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Listen to \u2018Popcast\u2019",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Read The Watching Newsletter",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "As Crises Collide, Nations Converge to Address Climate Change",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "U.S. Students in Europe Feel the Benefits as Dollar Strengthens",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Tent Shelter for Migrants Has Some Unexpected Supporters",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Astros on the Verge of a Dynasty After Game 5 Win Over Phillies",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "China\u2019s Out-of-Control Rocket Booster Is Headed Back to Earth",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Justice Dept. Weighs Special Counsel for Trump Inquiries if He Runs",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Paul Pelosi Leaves Hospital After Attack",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Paul Taylor Dance Company Is Accused of Gender Discrimination",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Britain Takes Sides Over a Chocolate Bar",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Newt Gingrich Is Willing to Testify to Jan. 6 Panel, His Lawyer Says",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "U.S. hot spots \u203a",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Global hot spots \u203a",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "A Beginner\u2019s Guide to the Rowing Machine",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Exercise May Improve Your Immune Function",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Turn Your Walk Into a Workout With Disc Golf",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "How Painful Should Your Workout Be?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Be Here Now: How to Exercise Mindfully",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "\u2018The Year of Magical Thinking\u2019 Gets Joan Didion\u2019s Intention Just Right",
+            "sentiment": "POSITIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "\u2018Good Night Oppy\u2019: Life (Kind of) on Mars",
+            "sentiment": "POSITIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "In \u2018Dangerous Liaisons,\u2019 Two Play the Game",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Simple Gestures Spark Resilience",
+            "sentiment": "POSITIVE",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "N.F.L. Week 9 Predictions",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Highlights and Analysis From Game 5 of the World Series",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "What Is Each M.L.B. Team\u2019s Biggest Need This Offseason?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "After Overcoming Cancer, Trey Mancini Pays Tribute at the World Series",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Celtics Suspended Their Head Coach. Now the Nets Want to Hire Him.",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Qatar World Cup: Does the Delivery Meet the Promises?",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "Louisville Was Punished, but the N.C.A.A.\u2019s Amateurism Rules are Empty Threats",
+            "sentiment": "NEUTRAL",
+            "hate_speech": "NO HS"
+        },
+        {
+            "title": "The Best First Wordle Words",
+            "sentiment": "POSITIVE",
+            "hate_speech": "NO HS"
+        }
+    ]
+}
