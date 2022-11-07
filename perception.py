@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
 import requests
-import json
 import boto3
 
 import modelPrediction as mp
@@ -76,7 +75,7 @@ def send_data(results):
     res_code = req.status_code, req.reason
     print("Response: ", res_vat)
     print("Status code: ", res_code)
-    
+
     return req
 
 def engine(results):
