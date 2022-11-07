@@ -1,2 +1,2 @@
 # perception
-Analizzare titoli di giornale presenti sui social (twitter) per determinare se contengono odio o puntano a suscitare odio.
+Analizzare titoli di giornale presenti online per determinare se contengono odio o puntano a suscitare odio.
