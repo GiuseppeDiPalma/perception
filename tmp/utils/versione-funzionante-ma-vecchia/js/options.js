@@ -4,7 +4,7 @@ onload = async () => {
     let rows = []
 
     try {
-        let response = await fetch('https://localhost:5000/results')
+        let response = await fetch('http://localhost:5000/results')
         let json = await response.json()
         console.log(json)
 
