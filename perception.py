@@ -43,18 +43,12 @@ def get_titles():
                 "sentiment": "",
                 "hate_speech": ""
             })
-        # elif len(title.split()) < 3:
-        #     print("Title not added: ", title)
     
     print("Start engine...")
     engine(results)
     print("End engine!")
 
     return jsonify(titles)
-
-def print_results(results):
-    with open('results-test.json', 'w') as f:
-        json.dump(results, f, indent=4)
 
 def calculate_sentiment(results):
     titles = results['results']
@@ -90,8 +84,6 @@ def send_data(results):
     return req
 
 def engine(results):
-    print("Starting engine...")
-    
     print("Calculating sentiment...")
     calculate_sentiment(results)
 
@@ -100,9 +92,6 @@ def engine(results):
 
     print("Sending data to frontend...")
     send_data(results)
-
-    print("End engine!")
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)
