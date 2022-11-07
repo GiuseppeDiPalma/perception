@@ -90,6 +90,8 @@ def send_data(results):
     return req
 
 def engine(results):
+    print("Starting engine...")
+    
     print("Calculating sentiment...")
     calculate_sentiment(results)
 
@@ -98,8 +100,9 @@ def engine(results):
 
     print("Sending data to frontend...")
     send_data(results)
-    # test = jsonify(results)
-    # test(test)
+
+    print("End engine!")
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)
