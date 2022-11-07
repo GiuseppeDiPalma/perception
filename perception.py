@@ -71,16 +71,12 @@ def calculate_hate_speech(results):
 def send_data(results):
     jsonify(results)
     req = requests.post('http://localhost:5000/results', json=results)
-    # check if the request was successful
-    if req.status_code == 200:
-        print('Request successful')
-    else:
-        print("NO NO NO:", req.status_code)
 
     res_vat = req.text
     res_code = req.status_code, req.reason
     print("Response: ", res_vat)
     print("Status code: ", res_code)
+    
     return req
 
 def engine(results):
