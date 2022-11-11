@@ -3,8 +3,10 @@ onload = async () => {
     const clearBtn = document.querySelector('.clear-btn')
     let rows = []
 
+    console.log("Provo retrive dati...")
     try {
-        let response = await fetch('https://localhost:5000/results')
+        console.log("Dentro-1")
+        let response = await fetch('http://localhost:5000/results')
         let json = await response.json()
         console.log(json)
 

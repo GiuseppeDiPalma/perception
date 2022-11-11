@@ -3,6 +3,7 @@ from flask_cors import CORS, cross_origin
 
 import requests
 import boto3
+from json import dumps
 
 import modelPrediction as mp
 
@@ -15,7 +16,6 @@ data = {
 }
 
 results = {
-    "success": True,
     "results": [
         {
             "title": " ",
@@ -51,10 +51,13 @@ def get_titles():
 
 def calculate_sentiment(results):
     titles = results['results']
-    comprehend = boto3.client('comprehend', region_name='us-east-1')
-    for title in titles:
-        sentiment = comprehend.detect_sentiment(Text=title['title'], LanguageCode='en')
-        title['sentiment'] = sentiment['Sentiment']
+    try: 
+        comprehend = boto3.client('comprehend', region_name='us-east-1')
+        for title in titles:
+            sentiment = comprehend.detect_sentiment(Text=title['title'], LanguageCode='en')
+            title['sentiment'] = sentiment['Sentiment']
+    except Exception as e:
+        title['sentiment'] = "ERROR"
     return results
 
 def calculate_hate_speech(results):
@@ -68,13 +71,15 @@ def calculate_hate_speech(results):
     return results
 
 def send_data(results):
-    jsonify(results)
-    req = requests.post('http://localhost:5000/results', json=results)
-
-    res_vat = req.text
-    res_code = req.status_code, req.reason
-    print("Response: ", res_vat)
-    print("Status code: ", res_code)
+    # jsonify(results)
+    test_file = dumps(results)
+    #create headers
+    headers = {'Content-type': 'application/json, charset=utf-8'}
+    req = requests.post('http://localhost:5000/results', json=test_file, headers=headers)
+    print()
+    print("Response: ", req.text)
+    print("Status code: ", req.status_code)
+    print("Reason: ", req.reason)
 
     return req
 

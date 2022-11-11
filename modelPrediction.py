@@ -8,6 +8,7 @@ from nltk.corpus import stopwords
 from pickle import load
 
 df = pd.read_csv('data/dataset/suspicious-tweets.csv')
+model_to_load_path = 'data/modelSave/nb_model.sav'
 
 def load_model(path):
     model = load(open(path, 'rb'))
@@ -38,7 +39,7 @@ counts = transformer.fit_transform(counts)
 print("End modelPrediction computation")
 
 def prediction(stringa):
-    model = load_model('data/modelSave/nb_model.sav')
+    model = load_model(model_to_load_path)
     stringa = preprocess_text(stringa)
     stringa = nltk.word_tokenize(stringa)
     stringa = ' '.join(stringa)
