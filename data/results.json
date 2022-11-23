@@ -1,0 +1,100 @@
+{
+    "results": [
+        {
+            "title": "So hoes that smoke are losers ?  yea ... go on IG",
+            "hate_speech_baseline": "Hate Speech",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Hate Speech",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Hate Speech",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "Bitch who do you love",
+            "hate_speech_baseline": "Hate Speech",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Hate Speech",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "Cant you see these hoes wont change",
+            "hate_speech_baseline": "Hate Speech",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Neutral",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "Lames crying over hoes thats tears of a clown",
+            "hate_speech_baseline": "Hate Speech",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Neutral",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "We did an unexpected workshop for the iPhone4S",
+            "hate_speech_baseline": "Neutral",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Hate Speech",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "Lmfao look at the argument I had with Siri",
+            "hate_speech_baseline": "Neutral",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Neutral",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "Incredible: 4 million iPhone 4Ss in 3 days",
+            "hate_speech_baseline": "Neutral",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Hate Speech",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        },
+        {
+            "title": "You are so blessed",
+            "hate_speech_baseline": "Neutral",
+            "nb_model.sav": "Neutral",
+            "sv_os_model.sav": "Neutral",
+            "ab_os_model.sav": "Neutral",
+            "dt_os_model.sav": "Neutral",
+            "sv_model.sav": "Neutral",
+            "nb_os_model.sav": "Hate Speech",
+            "dt_model.sav": "Neutral",
+            "ab_model.sav": "Neutral"
+        }
+    ]
+}

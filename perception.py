@@ -1,11 +1,15 @@
+import boto3
+import os
+from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
-import requests
-import boto3
-from json import dumps
-
 import modelPrediction as mp
+
+# load credentials from .env file
+load_dotenv()
+AWS_ACCESS_KEY_ID = os.getenv('aws_access_key_id')
+AWS_SECRET_ACCESS_KEY = os.getenv('aws_secret_access_key')
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -15,19 +19,20 @@ data = {
     "titles": []
 }
 
-results = {
-    "results": [
-        {
-            "title": " ",
-            "sentiment": " ",
-            "hate_speech": " "
-        }
-    ]
-}
-
 @app.route('/titles', methods=['POST', 'GET'])
 @cross_origin()
 def get_titles():
+    results = {
+        "success": True,
+        "results": [
+            {
+                "title": " ",
+                "sentiment": " ",
+                "hate_speech": " "
+            }
+        ]
+    }
+
     print("Retriving titles from newspaper...")
     titles = request.get_json()
 
@@ -42,56 +47,50 @@ def get_titles():
                 "sentiment": "",
                 "hate_speech": ""
             })
-    
+
     print("Start engine...")
-    engine(results)
+
+    # Add sentiment analysis and hate analysis to result
+    engine_results = engine(results)
     print("End engine!")
 
-    return jsonify(titles)
+    all_results = {'title_list': titles, 'engine_results': engine_results}
 
-def calculate_sentiment(results):
-    titles = results['results']
-    try: 
+    return jsonify(all_results)
+
+
+def calculate_sentiment(calc_sent_results):
+    titles = calc_sent_results['results']
+    try:
         comprehend = boto3.client('comprehend', region_name='us-east-1')
         for title in titles:
             sentiment = comprehend.detect_sentiment(Text=title['title'], LanguageCode='en')
             title['sentiment'] = sentiment['Sentiment']
     except Exception as e:
         title['sentiment'] = "ERROR"
-    return results
+    return calc_sent_results
 
-def calculate_hate_speech(results):
-    titles = results['results']
+
+def calculate_hate_speech(calc_hate_results):
+    titles = calc_hate_results['results']
     for title in titles:
         hate_speech = mp.prediction(title['title'])
         if hate_speech == 1:
             title['hate_speech'] = "NO HS"
         elif hate_speech == 0:
             title['hate_speech'] = "HS"
-    return results
+    return calc_hate_results
 
-def send_data(results):
-    # jsonify(results)
-    test_file = dumps(results)
-    #create headers
-    headers = {'Content-type': 'application/json, charset=utf-8'}
-    req = requests.post('http://localhost:5000/results', json=test_file, headers=headers)
-    print()
-    print("Response: ", req.text)
-    print("Status code: ", req.status_code)
-    print("Reason: ", req.reason)
-
-    return req
-
-def engine(results):
+def engine(engine_results):
     print("Calculating sentiment...")
-    calculate_sentiment(results)
+    engine_results = calculate_sentiment(engine_results)
 
     print("Calculating hate speech...")
-    calculate_hate_speech(results)
+    engine_results = calculate_hate_speech(engine_results)
 
-    print("Sending data to frontend...")
-    send_data(results)
+    print("Return data to frontend...")
+    return engine_results
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)
