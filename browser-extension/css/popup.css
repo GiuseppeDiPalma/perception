@@ -77,10 +77,46 @@ main {
     background-color: green;
 }
 
+.all-titles-hs {
+    background-color: red;
+}
+
+.all-titles-no-hs {
+    background-color: green;
+}
+
 .card-title {
     font-size: 30px;
 }
 
 .card-subtitle {
     font-size: 14px;
+}
+
+.small-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.positive-sentiment {
+    background-color: rgb(72, 255, 0);
+}
+
+.negative-sentiment {
+    background-color: rgb(100, 97, 97);
+}
+
+.mixed-sentiment {
+    background-color: rgb(0, 110, 255);
+}
+
+.neutral-sentiment {
+    background-color: rgb(9, 0, 128);
 }
