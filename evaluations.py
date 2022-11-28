@@ -101,7 +101,7 @@ for model in modelli:
             result[model] = "Neutral"
         elif predict == 0:
             result[model] = "Hate Speech"
-        
+
 # dict to json
 with open('data/results.json', 'w') as outfile:
     json.dump(results, outfile, indent=4)

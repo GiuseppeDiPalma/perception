@@ -93,4 +93,4 @@ def engine(engine_results):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)
+    app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=True)
