@@ -105,3 +105,4 @@ for model in modelli:
 # dict to json
 with open('data/results.json', 'w') as outfile:
     json.dump(results, outfile, indent=4)
+

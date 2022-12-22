@@ -55,3 +55,22 @@ def prediction(stringa):
     stringa = transformer.transform(stringa)
     prediction = model.predict(stringa)
     return prediction
+
+
+#MAKE PREDICTION
+print(prediction("I am going to kill"))
+
+print(prediction("Negro Under Sentence To Hang At Tallahassee."))
+print(prediction("Unbelievable murder by an African community in New York"))
+print(prediction("LGBQT rights parade attacked by white supremacists"))
+print(prediction("Governor Brough Fired Upon By Negroes At Elaine"))
+print(prediction("In a Turbulent Time for China, Xi Projects Unity at an Ex-Leader’s Funeral"))
+print(prediction("Drone Attacks Hit Russia for 2nd Straight Day"))
+print(prediction("pain Is Locked in a Stalemate With Morocco in the Second Half"))
+print(prediction("Inside the Saudi Strategy to Keep the World Hooked on Oil"))
+print(prediction("Biden Administration Expands Protections for Haitian Migrants"))
+print(prediction("vegetarian mushroom shawarma pitas"))
+print(prediction("Lebanese Stuffed Eggplant"))
+print(prediction("Rosquillas maize biscuits from Nicaragua"))
+print(prediction("Typical Polish dish - Zurek"))
+print(prediction("Is This Elephant Bothering You?"))
